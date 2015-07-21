@@ -1,0 +1,3 @@
+Browser: Chrome
+Username: patshay@gmail.com
+Password: testpass

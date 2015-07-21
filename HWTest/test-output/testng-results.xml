@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="wikiasuite" duration-ms="2367" started-at="2015-07-21T20:53:31Z" finished-at="2015-07-21T20:53:33Z">
+    <groups>
+    </groups>
+    <test name="wikiatest" duration-ms="2367" started-at="2015-07-21T20:53:31Z" finished-at="2015-07-21T20:53:33Z">
+      <class name="wikiatests.LoginTest">
+        <test-method status="PASS" signature="Test1()[pri:0, instance:wikiatests.LoginTest@50b472aa]" name="Test1" duration-ms="2361" started-at="2015-07-21T13:53:31Z" description="LoginTest" finished-at="2015-07-21T13:53:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+      </class> <!-- wikiatests.LoginTest -->
+    </test> <!-- wikiatest -->
+  </suite> <!-- wikiasuite -->
+</testng-results>
