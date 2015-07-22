@@ -41,7 +41,7 @@ public class FindAFile {
 				for (File temp : file.listFiles()) {
 				    if (temp.isDirectory()) {
 				 
-				    	if(temp.getName().matches("(.*)"+getFileNameToSearch())        ){
+				    	if(temp.getName().matches("(.*)"+getFileNameToSearch())){
 				    		result.add(temp.getAbsoluteFile().toString());
 				    	}
 				    	
@@ -52,8 +52,7 @@ public class FindAFile {
 						if (getFileNameToSearch().equals(temp.getName().toLowerCase())) {			
 						    result.add(temp.getAbsoluteFile().toString());//If the file name to search and current file match then add it as a result
 					    } else if(temp.getName().toLowerCase().endsWith(getFileNameToSearch())){
-					    	//TODO: how hacky is this?
-					    	result.add(temp.getAbsoluteFile().toString());//If a file is found that ends with the filename (in case of ipa files)
+					    	result.add(temp.getAbsoluteFile().toString());//If a file is found that ends with the filename
 					    }
 		 
 				    }//end of else
@@ -80,7 +79,6 @@ public class FindAFile {
 			case 0: //If there are no results
 					System.out.println("\nNo result found!");
 					System.out.println("Could not find " + fileNameToSearch + "... was it deleted?");//return a string saying it was not found
-					//TODO: add an error log statement here
 					break;
 			case 1: //If there was only 1 result found
 					String foundPath = getResultList().get(0);
@@ -107,17 +105,14 @@ public class FindAFile {
 					        	filePath =  getResultList().get(i-1);}
 					    		else{
 					    			filePath = "That doesn't seem to be a valid choice";
-					    			//TODO: add an error log statement
 					    		}
 					      } catch(NumberFormatException e) {
 					    	  filePath = "You entered a path choice that I couldn't parse!";
-					    	//TODO: add an error log statement
 					      }
 				    
 				    } catch (IOException e) {
 			            e.printStackTrace();
 			            filePath = "There was a problem reading that input";
-			          //TODO: add an error log statement
 				    }
 				    
 			}//end of the switch statement

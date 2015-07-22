@@ -71,8 +71,4 @@ public class BaseClass {
 		findElement(by, identifier).click();
 	}
 	
-	public void signIn(){
-		
-	}
-	
 }//End of BaseClass
