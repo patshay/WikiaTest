@@ -2,18 +2,12 @@ package wikiatests;
 
 import org.testng.xml.*;
 
-
-//This main file will parse the config.txt file, and write the xml object needed to run TestNG tests
-
-
 public class WikiaMain {
 
 	//first lets set up the parsing for config.txt
 	public static void main(String[] args){
 		
-		//Write the xml file for TestNG (hardcoded to make sure the tests runs)
-				
-		
+		//Write the xml file for TestNG
 		WriteXMLFile testXML = new WriteXMLFile();
 		testXML.setXmlSuiteName("wikiasuite");//Name of the folder
 		testXML.setXmlTestName("wikiatest");//Name of the XML File
@@ -35,4 +29,4 @@ public class WikiaMain {
 	}//End of main method
 			
 			
-		}//End of WikiaMain
+}//End of WikiaMain

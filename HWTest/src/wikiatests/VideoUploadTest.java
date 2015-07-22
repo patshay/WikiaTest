@@ -19,18 +19,20 @@ public class VideoUploadTest extends BaseClass {
 		 * 6. Verify the filename is the same as on the flash message
 		 */
 		
-		//Redirect test check
-		String youtubeUrl = "https://www.youtube.com/watch?v=h9tRIZyTXTI";
+		//Redirect test check does not work when walling another webdriver.get(url)
+		//For some reason the User is signed out
+		
+		Thread.sleep(5000);//Sleep the thread, waiting for the redirect
+		String youtubeURL ="https://www.youtube.com/watch?v=h9tRIZyTXTI";
 		String connectionURL = "http://qm-homework.wikia.com/";
 		String redirectURL = "http://qm­homework.wikia.com/wiki/QM_HomeWork_Wikia";
 		wd.get(connectionURL); //Connect to wikia homework page before redirection
-		Thread.sleep(5000);//Sleep the thread, waiting for the redirect
-		
+		Thread.sleep(3000);//Sleep the thread, waiting for the redirect
 		
 		//Check the url and make sure the page has been redirected to http://qm­homework.wikia.com/wiki/QM_HomeWork_Wikia
 		if(wd.getCurrentUrl().equals(connectionURL)){
 			Assert.fail("Page was not redirected to " + redirectURL);
-			}
+		}
 		
 		//Click contribute
 		findAndClick("cssSelector", "nav.wikia-menu-button.contribute.secondary.combined");
@@ -40,7 +42,7 @@ public class VideoUploadTest extends BaseClass {
 		
 		//Enter the video url
 		findAndClick("cssSelector", "input#wpWikiaVideoAddUrl");
-		action.sendKeys(youtubeUrl).build().perform();
+		action.sendKeys(youtubeURL).build().perform();
 			
 		//Click add to submit the video
 		findAndClick("cssSelector", "input");

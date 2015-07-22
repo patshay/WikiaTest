@@ -2,22 +2,20 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="wikiasuite" duration-ms="19474" started-at="2015-07-22T19:36:19Z" finished-at="2015-07-22T19:36:38Z">
+  <suite name="wikiasuite" duration-ms="56517" started-at="2015-07-22T20:30:43Z" finished-at="2015-07-22T20:31:40Z">
     <groups>
     </groups>
-    <test name="wikiatest" duration-ms="19474" started-at="2015-07-22T19:36:19Z" finished-at="2015-07-22T19:36:38Z">
+    <test name="wikiatest" duration-ms="56517" started-at="2015-07-22T20:30:43Z" finished-at="2015-07-22T20:31:40Z">
       <class name="wikiatests.VideoUploadTest">
-        <test-method status="FAIL" signature="Test2()[pri:0, instance:wikiatests.VideoUploadTest@35ef1869]" name="Test2" duration-ms="14441" started-at="2015-07-22T12:36:24Z" description="VideoUploadTest" finished-at="2015-07-22T12:36:38Z">
+        <test-method status="FAIL" signature="Test2()[pri:0, instance:wikiatests.VideoUploadTest@4229bb3f]" name="Test2" duration-ms="22591" started-at="2015-07-22T13:31:17Z" description="VideoUploadTest" finished-at="2015-07-22T13:31:40Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Could not find the input#wpWikiaVideoAddUrl]]>
+              <![CDATA[Uploaded file name does not match the file on the youtube page]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Could not find the input#wpWikiaVideoAddUrl
+              <![CDATA[java.lang.AssertionError: Uploaded file name does not match the file on the youtube page
 	at org.testng.Assert.fail(Assert.java:94)
-	at wikiatests.BaseClass.findElement(BaseClass.java:61)
-	at wikiatests.BaseClass.findAndClick(BaseClass.java:71)
-	at wikiatests.VideoUploadTest.Test2(VideoUploadTest.java:42)
+	at wikiatests.VideoUploadTest.Test2(VideoUploadTest.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -40,7 +38,7 @@
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
 	at org.testng.TestNG.run(TestNG.java:1057)
 	at wikiatests.WriteXMLFile.setAndRunTestNG(WriteXMLFile.java:33)
-	at wikiatests.WikiaMain.main(WikiaMain.java:30)
+	at wikiatests.WikiaMain.main(WikiaMain.java:24)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
@@ -49,7 +47,7 @@
         </test-method> <!-- Test2 -->
       </class> <!-- wikiatests.VideoUploadTest -->
       <class name="wikiatests.LoginTest">
-        <test-method status="PASS" signature="Test1()[pri:0, instance:wikiatests.LoginTest@7193666c]" name="Test1" duration-ms="5025" started-at="2015-07-22T12:36:19Z" description="LoginTest" finished-at="2015-07-22T12:36:24Z">
+        <test-method status="PASS" signature="Test1()[pri:0, instance:wikiatests.LoginTest@5acf93bb]" name="Test1" duration-ms="33919" started-at="2015-07-22T13:30:43Z" description="LoginTest" finished-at="2015-07-22T13:31:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test1 -->
