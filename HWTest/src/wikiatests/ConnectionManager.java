@@ -1,7 +1,10 @@
 package wikiatests;
 
+
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class ConnectionManager {
 
@@ -12,22 +15,28 @@ public class ConnectionManager {
 	//singleton object
 	public static ConnectionManager INSTANCE = null;
 	
-	//String that holds what 
-	String browserType = "";
+	//String that holds what browser we should use
+	public ConfigReader conRead;
 	
+	String browserType = "";
 	
 	//singleton constructor
 	public ConnectionManager(){
-		//have a find file object
-		//have a config file reader object
-		//have a scanner object
 		
-		//while statement for parsing the above scanner object
+		FindAFile fileSearch = new FindAFile();//For finding the correct webdriver
+		String webdriverLocation = "";
+		conRead = new ConfigReader();
+		browserType = conRead.browserType.toLowerCase();//make this string easier to compare
 		
-		//set the browserType to what config.txt says
-		browserType = "chrome";
-		System.setProperty("webdriver.chrome.driver", "/Users/patricksc/Dev/WikiaTest/HWTest/JarsAndDrivers/chromedriver"); //this will need a class that finds files, so that it can run on wikia's computers
-		wd = new ChromeDriver();
+		if(browserType.toLowerCase().equals("chrome"))
+		{
+		  webdriverLocation = fileSearch.getFilePathFor("chromedriver", "/JarsAndDrivers");
+		  System.setProperty("webdriver.chrome.driver", webdriverLocation); //this will need a class that finds files, so that it can run on wikia's computers
+		  wd = new ChromeDriver();
+		} else if (browserType.equals("firefox")){
+		    wd = new FirefoxDriver();
+		}
+		wd.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 		
 	}//End of ConnectionManager constructor
 	

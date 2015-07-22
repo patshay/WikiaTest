@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [wikiasuite]">
+  <test name="wikiatest(failed)">
+    <classes>
+      <class name="wikiatests.VideoUploadTest">
+        <methods>
+          <include name="Test2"/>
+        </methods>
+      </class> <!-- wikiatests.VideoUploadTest -->
+    </classes>
+  </test> <!-- wikiatest(failed) -->
+</suite> <!-- Failed suite [wikiasuite] -->
